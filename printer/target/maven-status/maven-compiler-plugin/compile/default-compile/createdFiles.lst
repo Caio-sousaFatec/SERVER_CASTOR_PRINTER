@@ -1,0 +1,5 @@
+com/castor/printer/enums/Roles.class
+com/castor/printer/config/SwaggerConfig.class
+com/castor/printer/models/UserPersonal.class
+com/castor/printer/PrinterApplication.class
+com/castor/printer/models/UserPrincipal.class
