@@ -21,19 +21,19 @@ public class UserPersonal {
     private UserPrincipal userPrincipal;
 
     @Column(nullable = false)
-    String name;
+    private String name;
 
     @Column(nullable = false)
-    String address;
+    private String address;
 
     @Column(nullable = false)
-    String gender;
+    private String gender;
 
     @Column(nullable = false)
-    String phone;
+    private String phone;
 
     @Column(nullable = false)
-    String yo;
+    private String yo;
 
 
 }

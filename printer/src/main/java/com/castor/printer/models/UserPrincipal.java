@@ -5,7 +5,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.security.Timestamp;
+import java.util.Date;
+
 
 @Entity
 @Getter
@@ -14,21 +15,22 @@ import java.security.Timestamp;
 public class UserPrincipal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int userId;
+    private long userId;
 
     @Column(unique = true, nullable = false)
-    String email;
+    private String email;
 
     @Column(nullable = false)
-    String passHash;
+    private String passHash;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    Roles role;
+    private Roles role;
 
     @Column
-    Timestamp createdAt;
+    private Date createdAt;
 
     @OneToOne(mappedBy = "userPrincipal",  cascade = CascadeType.ALL, orphanRemoval = true)
     private UserPersonal userPersonal;
+
 }
